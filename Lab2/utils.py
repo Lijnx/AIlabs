@@ -10,12 +10,17 @@ def get_loaders(
     train_transform,
     val_transform,
     num_workers=4,
-    pin_memory=True
+    pin_memory=True,
+    tile_size=512,
+    train_stride=512,
+    eval_stride=256,
 ):
     train_ds = RoadsDataset(
         image_dir=train_dir,
         mask_dir=train_maskdir,
         transform=train_transform,
+        tile_size=tile_size,
+        stride=train_stride,
     )
 
     train_loader = DataLoader(
@@ -30,6 +35,8 @@ def get_loaders(
         image_dir=val_dir,
         mask_dir=val_maskdir,
         transform=val_transform,
+        tile_size=tile_size,
+        stride=eval_stride,
     )
 
     val_loader = DataLoader(
@@ -44,6 +51,8 @@ def get_loaders(
         image_dir=test_dir,
         mask_dir=test_maskdir,
         transform=val_transform,
+        tile_size=tile_size,
+        stride=eval_stride,
     )
 
     test_loader = DataLoader(
