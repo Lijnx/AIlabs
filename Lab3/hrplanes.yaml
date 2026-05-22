@@ -1,0 +1,7 @@
+names:
+- Plane
+nc: 1
+path: .
+test: data/plane/test.txt
+train: data/plane/train.txt
+val: data/plane/val.txt

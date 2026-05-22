@@ -2,4 +2,6 @@
 .codex
 __pycache__
 data
+runs
 *.pth
+*.pt

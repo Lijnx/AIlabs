@@ -8,11 +8,14 @@ dependencies = [
     "albumentations>=2.0.8",
     "ipykernel>=7.2.0",
     "matplotlib>=3.10.8",
+    "pandas>=3.0.3",
     "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
     "tifffile>=2026.4.11",
     "torch>=2.11.0",
     "torchvision>=0.26.0",
     "tqdm>=4.67.3",
+    "ultralytics>=8.4.52",
 ]
 
 [tool.uv.sources]
